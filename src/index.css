@@ -1,13 +1,127 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  border: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button:active {
+  box-shadow: none;
+}
+
+.main {
+  background-color: rgb(21, 226, 158);
+  width: 40%;
+  height: 100vh;
+  /* height: 100%; */
+  margin: auto;
+}
+
+.display {
+  height: 22vh;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  background-color: rgb(235, 231, 231);
+  border: 5px outset gray;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.pressedNum {
+  color: white;
+  background-color: black;
+}
+
+.pressedOp {
+  color: black;
+  background-color: white;
+}
+
+.keymod {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+.keymod:hover {
+  color: black;
+  background-color: white;
+  /* box-shadow: none; */
+}
+
+.numkey {
+  font-size: 20px;
+}
+
+.numkey:hover {
+  background-color: black;
+  color: white;
+  /* box-shadow: none; */
+}
+
+.opkey {
+  font-size: 22px;
+  color: orangered;
+  background-color: white;
+}
+
+.opkey:hover {
+  color: white;
+  background-color: orangered;
+}
+
+.key {
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 5px 7px 12px 3px #000000;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  .key {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .main {
+    width: 70%;
+  }
+
+  .key {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .main {
+    width: 100%;
+  }
+
+  .key {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 20px;
+  }
 }
