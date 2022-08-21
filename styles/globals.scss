@@ -30,6 +30,8 @@ button:active {
   font-size: 25px;
   font-weight: bold;
   padding: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
@@ -51,6 +53,11 @@ button:active {
   font-size: 20px;
   background-color: black;
   color: white;
+
+  svg {
+    width: 1.2rem;
+    vertical-align: middle;
+  }
 }
 
 .keymod:hover {
@@ -90,6 +97,17 @@ button:active {
   text-align: center;
   box-shadow: 5px 7px 12px 3px #000000;
   font-weight: 600;
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+.add,
+.minus,
+.multiply,
+.divide {
+  font-size: xx-large;
 }
 
 @media screen and (max-width: 1000px) {
