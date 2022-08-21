@@ -41,13 +41,14 @@ export default function Home() {
       setAnswer(ans);
     } catch (err) {
       MySwal.fire({
-        title: <p>Hello World</p>,
+        title: <p>Invalid expression</p>,
+        html: 'Try Again',
+        timer: 1000,
+        timerProgressBar: true,
         didOpen: () => {
           // `MySwal` is a subclass of `Swal` with all the same instance & static methods
           MySwal.showLoading();
         },
-      }).then(() => {
-        return MySwal.fire(<p>Shorthand works too</p>);
       });
     }
   };
@@ -63,7 +64,7 @@ export default function Home() {
       <section className="main">
         <section className="display">
           <span className="expression">{result}</span>
-          <span className="answer">Ans:{answer}</span>
+          <span className="answer">Ans: {answer}</span>
         </section>
 
         <div className="container">
